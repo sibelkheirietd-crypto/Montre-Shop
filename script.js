@@ -1,4 +1,11 @@
-// Données montres (prix en DA)
+// ============================================
+// MONTRES SHOP - SCRIPT COMPLET
+// Panier + Compte + Images HD Directes
+// ============================================
+
+// Données montres (IMAGES DIRECTES Unsplash HD)
 const montres = [
-    {id:1,nom:"Rolex Submariner",prix:28000,image:"images/montre1.jpg",categorie:"hommes",description:"Étanche 300m"},
-    {id:2,nom:"Omega Seamaster",prix:22000,image:"images/montre2.jpg",categorie:"hommes",description:"Chronomètre certifié"},
+    {
+        id: 1,
+        nom: "Rolex Submariner Homme",
+        prix
