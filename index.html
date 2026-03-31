@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montres Luxe - Homme & Femme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><i class="fas fa-clock"></i> Montres Luxe</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#hommes">Hommes</a></li>
+                    <li><a href="#femmes">Femmes</a></li>
+                    <li><a href="#panier" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal Connexion/Inscription -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="login">Connexion</button>
+                <button class="tab-btn" data-tab="register">Inscription</button>
+            </div>
+            
+            <!-- Login -->
+            <div id="login" class="tab-content active">
+                <h3>Connexion</h3>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit">Se connecter</button>
+                </form>
+            </div>
+
+            <!-- Register -->
+            <div id="register" class="tab-content">
+                <h3>Créer un compte</h3>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="nom" placeholder="Nom complet" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit">Créer le compte</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Montres de Luxe</h1>
+            <p>Qualité Suisse, Style Unique pour Hommes et Femmes</p>
+            <button class="cta-btn" onclick="document.getElementById('authModal').style.display='block'">
+                Commencer les achats
+            </button>
+        </div>
+    </section>
+
+    <!-- Hommes -->
+    <section id="hommes" class="products-section">
+        <div class="container">
+            <h2>Montres Hommes</h2>
+            <div class="products-grid" id="hommesProducts"></div>
+        </div>
+    </section>
+
+    <!-- Femmes -->
+    <section id="femmes" class="products-section">
+        <div class="container">
+            <h2>Montres Femmes</h2>
+            <div class="products-grid" id="femmesProducts"></div>
+        </div>
+    </section>
+
+    <!-- Panier Modal -->
+    <div id="panierModal" class="modal">
+        <div class="modal-content large">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Mon Panier</h2>
+            <div class="cart-items" id="cartItems">
+                <p>Votre panier est vide</p>
+            </div>
+            <div class="cart-total">
+                <h3>Total: <span id="cartTotal">0 DA</span></h3>
+                <button class="checkout-btn" id="checkoutBtn" disabled>Passer la commande</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Montres Luxe. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
